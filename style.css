@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+body {
+    font-family: 'Redressed', cursive;
+    color: rgb(107, 8, 107); 
+    overflow-x: hidden;
+    background-image: url("http://www.ensaltillo.com/206/119/235/2009/11/20/fondo_r1_c1.jpg");
+    background-size: 100em;
+    background-color: rgb(106, 165, 218);
+    height: 100%;
+}
+a {
+    text-decoration: none; 
+}
+#grilla {
+    display: grid;
+    grid-template-columns: 100px  650px  100px;
+    grid-template-rows: 100px;
+    grid-template-areas: "contenedorlogo titulo";
+    justify-content: space-between;
+    padding:10px ;
+}
+.contenedorlogo {
+    display:flex;
+    justify-content:flex-start;
+    max-width: 100%;
+    background-color: rgb(219, 124, 199);
+    border-radius:12px;
+    margin-top: 15px;
+}
+.titulo { 
+    max-width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+#barranav {
+    display: grid;
+    grid-template-rows: 50px;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-bottom: 5%;
+}
+#nav {
+    list-style :none;
+    border-radius:12px ;
+    background-color: aqua;
+}
+#nav li {
+    display: inline-block;
+    margin: 0px 20px;
+}
+#nav li a:hover {
+    background-color: rgb(197, 175, 218);
+    box-shadow:  2px 2px 2px red;
+}
+#nav li a{
+    text-transform: uppercase;
+    text-decoration:none ;
+    color:rgb(156, 59, 135);
+    font-size: 20px;;
+}
+.boxinfo {
+    display: grid;
+    grid-template-columns: 800px;
+    grid-template-rows: 50px ;
+    justify-content: center;
+    text-align: justify;
+    font-size: 20px;
+    color: rgb(23, 150, 192);
+    padding-top: 25px;
+}
+.video {
+    display: flex;
+    justify-content:center; 
+    padding-top: 50px;
+}
+.seguinos {
+    display:flex;
+    font-size: 20px;
+    padding-left: 25px;
+    margin-top: 45px;;
+    padding-bottom: 10px;
+}
+.redes {
+    display:flex;
+    margin-left: 25px;
+} 
+.copy {
+    font-size:20px ;
+    margin-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+/*galeria*/
+.imagenes__centradas {
+    display: grid;
+    grid-template-columns:  25% 25% 25% 25%;
+    grid-template-rows: repeat (4, 250px);
+    grid-template-areas: "AireA  CaA"
+                                    "PI PT"
+                                    "IE TM"
+                                    "ARP";
+    
+    justify-items :center;
+}
+.p {
+padding-left: 5px;
+}
+.AA {
+    /*display: grid;
+    grid-area: AireA;*/
+    margin-top: 25px;
+    padding: 5px; 
+    border: 3px solid black;
+    width: 250px;
+    margin-left: 12px;
+}
+.CA {
+    /* display: grid;
+    grid-area: CaA;*/
+    margin-top: 25px;
+    padding: 5px;
+    border: 3px solid black; 
+    width: 250px;
+    margin-left: 12px;
+}
+.PI {
+    margin-top: 25px;
+    padding: 5px;
+    border: 3px solid black; 
+    width: 250px;
+    margin-left:12px;
+}
+.PT {
+    margin-top: 25px;
+    padding: 5px;
+    border: 3px solid black; 
+    width: 238px;
+    margin-left: 12px; 
+}
+.IE {
+    margin-top: 25px;
+    padding: 5px;
+    border: 3px solid black; 
+    width: 250px; height: 200px;
+    margin-left: 12px; 
+}
+.ARP {
+    margin-top: 25px;
+    padding: 5px;
+    border: 3px solid black; 
+    width: 249px; height: 200px;
+    margin-left: 12px; 
+}
+.TM {
+    margin-top: 25px;
+    padding: 5px;
+    border: 3px solid black; 
+    width: 250px; height: 200PX;
+    margin-left: 12px; 
+}
+
+@media only screen and ( max-width: 600px){
+    body{
+        background-image: url("http://www.ensaltillo.com/206/119/235/2009/11/20/fondo_r1_c1.jpg");
+        background-size: 100em;
+    }
+    .titulo { 
+        margin-left: 5%;
+        font-size: 35px;
+        padding: 3%;
+        text-align: start;
+    }
+    #barranav {
+        display: grid;
+        grid-template-columns: 0px;
+        justify-content: left;
+        align-items: start;
+        margin-left: 12px;
+    }
+    #nav li a{
+        text-transform: uppercase;
+        text-decoration:none ;
+        color:rgb(156, 59, 135);
+        font-size: 15px;
+    }
+    .boxinfo {
+        display: grid;
+        grid-template-columns: 80%;
+        margin-left: 6%;
+        margin-top: 10%;
+        margin-bottom: 0px;
+    }
+    .seguinos {
+        padding-left: 25px;
+        margin-top: 15px;
+    }
+    .copy {
+        font-size:16px ;
+        margin-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    .imagenes__centradas {
+        display: grid;
+        grid-template-columns:  35% 35%;
+        grid-template-areas:"AireA AireA CaA CaA"
+                                        "PI PT"
+                                        "IE TM"
+                                        "ARP"; 
+        justify-content: center;
+        justify-items: center;
+    }
+}
+
+    /*MD*/
+@media only screen and (max-width: 480px) {
+    body{
+        background: rgb(218, 159, 159)
+    }
+    #barranav {
+        display: grid;
+        grid-template-columns: 0px;
+        justify-content: left;
+        align-items: start;
+        margin-left: 12px;
+    }
+    #nav li a{
+        text-transform: uppercase;
+        text-decoration:none ;
+        color:rgb(156, 59, 135);
+        font-size: 15px;
+    }
+    .imagenes__centradas {
+        display: grid;
+        margin-top: 20%;
+        grid-template-columns: 0%;
+        justify-items: center;
+    }
+}
+
+/*LG*/
+@media only screen and ( max-width: 320px) {
+    body {
+    background-color: rgb(233, 211, 12)
+    }
+    .titulo { 
+        margin-left: 5%;
+        font-size: 35px;
+        padding: 3%;
+        text-align: start;
+    }
+    #barranav {
+        display: grid;
+        grid-template-columns: 0px;
+        align-items:start;
+        margin-left: 12px;
+    }
+    #nav li a{
+        text-transform: uppercase;
+        text-decoration:none ;
+        color:rgb(156, 59, 135);
+        font-size: 15px;
+    }
+    .boxinfo {
+        display: grid;
+        grid-template-columns: 80%;
+        margin-left: 6%;
+        margin-top: 20%;
+        margin-bottom: 0px;
+    }
+    .seguinos {
+        padding-left: 25px;
+        margin-top: 15px;
+    }
+    .copy {
+        font-size:16px ;
+        margin-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    /*galeria*/
+    .imagenes__centradas {
+        display: grid;
+        grid-template-columns:  45%;
+    }
+}
