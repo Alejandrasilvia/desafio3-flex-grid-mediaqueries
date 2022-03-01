@@ -21,15 +21,31 @@ a {
     grid-template-rows: 100px;
     grid-template-areas: "contenedorlogo titulo";
     justify-content: space-between;
+    justify-items: center;
+    align-items: center;
     padding:10px ;
+}
+@keyframes un_efecto{
+    0% {width: 100px;}
+    25% {width: "150px"; transform: rotate(90deg);}
+    50% {width: "200px"; background-color: rgb(152, 233, 86); transform: rotate(180deg);}
+    75% {width: "150"; transform: rotate(270deg);}
+    100% {width: "100px";background-color:rgb(219, 124, 199) ; transform: rotate(360deg);} 
 }
 .contenedorlogo {
     display:flex;
     justify-content:flex-start;
     max-width: 100%;
-    background-color: rgb(219, 124, 199);
+    background-color: rgb(219, 124, 199) ;
     border-radius:12px;
     margin-top: 15px;
+/*animación*/
+/*background-color: rgb(219, 124, 199) ;*/
+animation-name: un_efecto;
+animation-iteration-count: 5s;
+animation-timing-function: ease-in;
+animation-delay: 1s;
+animation-duration: 3s;    
 }
 .titulo { 
     max-width: 100%;
@@ -37,6 +53,14 @@ a {
     font-size: 65px;
     text-align: center;
 }
+h1 {
+    font-size: 65px;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-delay: 1s;
+    
+}
+
 #barranav {
     display: grid;
     grid-template-rows: 50px;
